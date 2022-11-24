@@ -1,0 +1,11 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4rem;
+    justify-content: center;
+    background-color: #ff9800;
+}
+
+.navBarMenu {
+    list-style: none;
+}
