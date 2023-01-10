@@ -1,7 +1,7 @@
 import React from 'react'
 import "./NavBar.css"
 import CardWidget from '../CardWidget/CardWidget'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -23,27 +23,42 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/Mothers'}>
-                Mothers
+              <NavLink to={'/category/Mothers Intel'}>
+                Mothers Intel
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/CPU'}>
-                CPU
+              <NavLink to={'/category/Mothers AMD'}>
+                Mothers AMD
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/GPU'}>
-                GPU
+              <NavLink to={'/category/Procesadores Intel'}>
+                Procesadores Intel
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/RAM'}>
-                RAM
+              <NavLink to={'/category/Procesadores AMD'}>
+                Procesadores AMD
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={'/category/Placa de video GeForce'}>
+                Placas de video GeForce
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={'/category/Placa de video Radeon AMD'}>
+                Placas de video Radeon AMD
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={'/category/Memoria RAM DDR5'}>
+                Memoria RAM DDR5
               </NavLink>
             </li>
         </ul>
-        <CardWidget/>
+        <Link to={'cart'}><CardWidget /></Link>
     </div>
   )
 }

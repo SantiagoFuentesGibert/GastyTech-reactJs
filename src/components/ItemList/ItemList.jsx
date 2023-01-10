@@ -1,6 +1,6 @@
-import React from 'react'
-import Item from '../Item/Item'
 import { Link } from 'react-router-dom'
+import Item from '../Item/Item'
+import './ItemList.css'
 
 const ItemList = ({lista}) => {
   return (
@@ -8,11 +8,11 @@ const ItemList = ({lista}) => {
         {lista.map((product) => (
         <Link 
         key={product.id}
-        to={`/detail/` + product.id}>
-            <Item  product={product}/>
+        to={`/detail/` + product.id}
+        >
+          <Item  product={product}/>
         </Link>
-    ))
-    }
+        ))}
     </div>
   )
 }

@@ -1,33 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import data from '../mockData'
+import './ItemListContainer.css';
+import { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
+import { getFirestore, getDocs, collection, query, where} from 'firebase/firestore'
 
 const ItemListContainer = (props) => {
-
   const {category} = useParams();
-
   const [productList, setProductList] = useState([]);
 
+  
+  
   useEffect(() => {
-    if(category) {
-      const response = data.filter((response) => response.category === category)
-      setProductList(response);
-    }else {
-      getProducts.then((response) => {
-        setProductList(response);
-      });
-    }
+    const getProducts = () => {
+      const db = getFirestore();
+      const queryBase = collection(db, 'items'); 
+      const querySnapshot = category ? query(queryBase, where('categoryId', '==', category)) : queryBase;
+
+        getDocs(querySnapshot).then((response) => {
+          const data = response.docs.map((product) => {
+            return { id: product.id, ...product.data()};
+          });
+          setProductList(data);
+        })
+    };
+    getProducts();
   }, [category])
 
-  const getProducts = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(data);
-      }, 2000)
-    })
-
   return (
-    <ItemList lista={productList}/>
+    <section>
+      <h2>{props.titulo}</h2>
+      <section>
+        <ItemList lista={productList}/>
+      </section>
+    </section>
   )
 }
 
