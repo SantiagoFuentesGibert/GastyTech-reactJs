@@ -4,8 +4,14 @@
     column-gap: 4rem;
     justify-content: center;
     background-color: #ff9800;
+    text-decoration: none;
 }
 
 .navBarMenu {
     list-style: none;
+}
+
+.navBarMenu--decoration {
+    text-decoration: none;
+    color: black;
 }

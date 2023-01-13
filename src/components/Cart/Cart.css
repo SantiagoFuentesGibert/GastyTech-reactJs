@@ -1,0 +1,24 @@
+.productosEnElCarrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productosCarritoInfo {
+    display: grid;
+    grid-template-columns: 250px 950px;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 4rem;
+}
+
+.imgCarritoInfo{
+    width: 250px;
+}
+
+.volver {
+    text-decoration: none;
+}

@@ -8,52 +8,47 @@ const NavBar = () => {
     <div className='navBar'>
         <ul className='navBar navBarMenu'>
             <li>
-              <NavLink to={'/'}>
+              <NavLink to={'/'} className='navBarMenu--decoration'>
                 Inicio
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/productos'}>
+              <NavLink to={'/productos'} className='navBarMenu--decoration'>
                 Productos
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/contacto'}>
-                Contacto
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={'/category/Mothers Intel'}>
+              <NavLink to={'/category/Mothers Intel'} className='navBarMenu--decoration'>
                 Mothers Intel
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/Mothers AMD'}>
+              <NavLink to={'/category/Mothers AMD'} className='navBarMenu--decoration'>
                 Mothers AMD
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/Procesadores Intel'}>
+              <NavLink to={'/category/Procesadores Intel'} className='navBarMenu--decoration'>
                 Procesadores Intel
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/Procesadores AMD'}>
+              <NavLink to={'/category/Procesadores AMD'} className='navBarMenu--decoration'>
                 Procesadores AMD
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/Placa de video GeForce'}>
+              <NavLink to={'/category/Placa de video GeForce'} className='navBarMenu--decoration'>
                 Placas de video GeForce
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/Placa de video Radeon AMD'}>
+              <NavLink to={'/category/Placa de video Radeon AMD'} className='navBarMenu--decoration'>
                 Placas de video Radeon AMD
               </NavLink>
             </li>
             <li>
-              <NavLink to={'/category/Memoria RAM DDR5'}>
+              <NavLink to={'/category/Memoria RAM DDR5'} className='navBarMenu--decoration'>
                 Memoria RAM DDR5
               </NavLink>
             </li>

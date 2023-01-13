@@ -1,3 +1,37 @@
 .imgProdDetail{
     width: 250px;
 }
+
+.productosDetail {
+    display: grid;
+    grid-template-columns: 250px 950px;
+    width: 1200px;
+    min-height: 450px;
+    background-color: white;
+    border-radius: 4rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.productosDetail--info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.butonAddtoCart{
+    width: 150px;
+    height: 32px;
+    background-color: #ff9800;
+    border: solid #ff9800;
+    border-radius: 4px;
+}
+
+.carritoOrHome{
+    width: 150px;
+    text-decoration: none;
+    color: black;
+    background-color: #ff9800;
+    border-radius: 4px;
+}

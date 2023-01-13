@@ -4,11 +4,12 @@ import './ItemList.css'
 
 const ItemList = ({lista}) => {
   return (
-    <div>
+    <div className='prueba'>
         {lista.map((product) => (
         <Link 
         key={product.id}
         to={`/detail/` + product.id}
+        style={{textDecoration:"none", color:"black"}}
         >
           <Item  product={product}/>
         </Link>
